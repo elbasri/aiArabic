@@ -21,6 +21,12 @@ class Montaj:
         self.taman = taman
         self.majmo3 = majmo3
 
+    def takhfid(self, khasya, kima):
+        if khasya == "taman" : 
+            self.taman = self.taman - float(kima)
+        else:
+            self.majmo3 = self.majmo3 - int(kima)
+    
 # إنشاء كائنات 
 iphone_15 = Montaj(id = 1, ism = "أيفون 15", wasf = "هاتف التفاحة الشهير", taman = 13000 , majmo3 = 5)
 sumsung_s24 = Montaj(id = 2, ism = "سامسونج إس 24", wasf = "الكوري العنيد", taman = 12000 , majmo3 = 7)
@@ -37,4 +43,13 @@ print(sumsung_s24.no3)
 
 # طبع خواص أخرى
 print(iphone_15.taman)
-print(iphone_15.majmo3)
+print(sumsung_s24.majmo3)
+
+# تعديل قيم الخاصيات
+iphone_15.takhfid("taman", 507.5)
+sumsung_s24.takhfid("majmo3", 2)
+
+
+# طبع نفس الخواص بعد التعديل
+print(iphone_15.taman)
+print(sumsung_s24.majmo3)
